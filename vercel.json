@@ -1,0 +1,13 @@
+{
+  "rewrite": [{ "source": "/(.*)", "destination": "main.py" }],
+  "crons": [
+    {
+      "path": "/check-invest",
+      "schedule": "30 13 * * *"
+    },
+    {
+      "path": "/check-invest",
+      "schedule": "0 19 * * *"
+    }
+  ]
+}
