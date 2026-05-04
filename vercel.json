@@ -1,5 +1,7 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "main.py" }],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "main.py" }
+  ],
   "crons": [
     {
       "path": "/check-invest",
