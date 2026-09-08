@@ -2,9 +2,45 @@
 venv/
 .venv/
 env/
-.env
 ENV/
+env.bak/
+venv.bak/
+
+# Variáveis de ambiente e segredos (NUNCA subir ao Git)
+.env
+.env.*
+!.env.example
 
 # Arquivos temporários do Python
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribuição / Build
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Vercel
+.vercel/
+
+# Configurações de IDE / Sistema operacional
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
