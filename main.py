@@ -24,6 +24,7 @@ def coletar_dados_lote(tickers: list[str]):
      )
 
 @app.get("/")
+@app.get("/check-invest")
 async def verificar_investimentos():
     token = os.getenv("TELEGRAM_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
