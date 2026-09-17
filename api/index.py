@@ -29,11 +29,12 @@ async def verificar_investimentos():
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
     if not token or not chat_id:
-        # Lança erro HTTP 500 legível via JSON
-        raise HTTPException(
-            status_code=500,
-            detail="Credenciais do Telegram não configuradas no ambiente da Vercel."
-        )
+        return {
+            "status": "erro_configuracao",
+            "has_token": bool(token),
+            "has_chat_id": bool(chat_id),
+            "mensagem": "Credenciais do Telegram nao encontradas no os.getenv"
+        }
 
     dados = await run_in_threadpool(coletar_dados_lote, TICKERS)
 

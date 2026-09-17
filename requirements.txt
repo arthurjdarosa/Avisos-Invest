@@ -1,6 +1,5 @@
 fastapi
-uvicorn
-yfinance
 httpx
+yfinance
 python-dotenv
-pandas
+uvicorn
